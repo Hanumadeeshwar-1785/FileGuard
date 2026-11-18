@@ -1,0 +1,120 @@
+/* ==========================================================================
+   File Guard Design System - Theme Variables
+   Theme: Professional Cybersecurity (Dark Navy-Blue with Cyan Highlights)
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Navy Dark Cyber */
+  --bg-app: #070d1e;
+  --bg-surface: #0b142f;
+  --bg-card: #0f1c3f;
+  --bg-card-elevated: #152554;
+  --bg-card-subtle: rgba(15, 28, 63, 0.65);
+  --bg-input: #0a1126;
+
+  /* Accent & Highlight Colors */
+  --cyan-primary: #00f0ff;
+  --cyan-hover: #38bdf8;
+  --cyan-deep: #0284c7;
+  --cyan-glow: rgba(0, 240, 255, 0.22);
+  --cyan-glow-intense: rgba(0, 240, 255, 0.45);
+  --cyan-gradient: linear-gradient(135deg, #00f0ff 0%, #0072ff 100%);
+  --cyan-card-border: rgba(0, 240, 255, 0.22);
+
+  --blue-primary: #2563eb;
+  --blue-hover: #3b82f6;
+  --blue-glow: rgba(37, 99, 235, 0.28);
+  --blue-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-success-bg: rgba(16, 185, 129, 0.12);
+  --color-success-border: rgba(16, 185, 129, 0.3);
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-warning-border: rgba(245, 158, 11, 0.3);
+
+  --color-danger: #ef4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.12);
+  --color-danger-border: rgba(239, 68, 68, 0.3);
+
+  /* Typography Colors */
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-cyan: #00f0ff;
+
+  /* Borders & Dividers */
+  --border-subtle: #17264f;
+  --border-default: #1e3368;
+  --border-focus: #00f0ff;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows & Neon Glows */
+  --shadow-card: 0 8px 24px -4px rgba(3, 7, 18, 0.6), 0 0 0 1px var(--border-subtle);
+  --shadow-card-hover: 0 12px 32px -4px rgba(0, 240, 255, 0.12), 0 0 0 1px var(--cyan-card-border);
+  --shadow-neon-cyan: 0 0 20px rgba(0, 240, 255, 0.4);
+  --shadow-neon-blue: 0 0 20px rgba(37, 99, 235, 0.4);
+
+  /* Layout Specs */
+  --mobile-width: 420px;
+  --mobile-height: 870px;
+  --status-bar-height: 40px;
+  --top-bar-height: 58px;
+  --bottom-bar-height: 68px;
+
+  /* Font Families */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base resets & scrollbar */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #030712;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom cyber scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-deep);
+}
+

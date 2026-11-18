@@ -1,0 +1,252 @@
+/* ==========================================================================
+   Security Information Screen Styling
+   ========================================================================== */
+
+.security-screen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Security Navigation Chips / Quick Jump */
+.security-topic-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.security-topic-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-chip {
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topic-chip.active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+/* Security Main Header Card */
+.security-banner-card {
+  background: linear-gradient(145deg, #0e1a3d 0%, #081024 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.security-banner-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.security-banner-subtitle {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Cryptographic Architecture Flow Diagram */
+.crypto-pipeline-diagram {
+  background: #091228;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diagram-header {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--cyan-primary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pipeline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(16, 28, 63, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 11.5px;
+}
+
+.pipeline-step-number {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--cyan-primary);
+  color: var(--cyan-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pipeline-step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline-step-title {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.pipeline-step-desc {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+/* Detailed Security Topic Cards */
+.security-topic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-normal);
+}
+
+.topic-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.topic-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.topic-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topic-subtitle {
+  font-size: 12px;
+  color: var(--cyan-primary);
+  font-family: var(--font-mono);
+}
+
+.topic-points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topic-point-item {
+  background: rgba(10, 18, 41, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.point-heading {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.point-heading svg {
+  color: var(--cyan-primary);
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.point-description {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Technical Specification Table */
+.tech-spec-table {
+  background: #081024;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.tech-spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tech-spec-row:last-child {
+  border-bottom: none;
+}
+
+.tech-spec-label {
+  color: var(--text-muted);
+}
+
+.tech-spec-value {
+  color: var(--cyan-primary);
+  font-weight: 600;
+  text-align: right;
+}
+

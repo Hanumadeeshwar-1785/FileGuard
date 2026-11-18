@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Splash Screen Styling
+   ========================================================================== */
+
+.splash-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px 24px 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background Cyber Radial Glows */
+.splash-glow-top {
+  position: absolute;
+  top: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.18) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.splash-glow-bottom {
+  position: absolute;
+  bottom: -40px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.splash-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Shield Vault Logo Animation */
+.splash-logo-container {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.splash-pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+  animation: splash-pulse 2.8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.splash-pulse-ring.delay {
+  animation-delay: 1.4s;
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+@keyframes splash-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.22);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.splash-logo-core {
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #111f46 0%, #080f24 100%);
+  border: 1.5px solid rgba(0, 240, 255, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 240, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan-primary);
+  position: relative;
+  z-index: 5;
+}
+
+.splash-logo-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 12px var(--cyan-primary));
+}
+
+.splash-brand-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(180deg, #ffffff 30%, #7dd3fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.splash-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cyan-primary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin-bottom: 14px;
+}
+
+.splash-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 280px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.splash-security-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.splash-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 28, 63, 0.7);
+  border: 1px solid var(--border-default);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.splash-chip svg {
+  color: var(--cyan-primary);
+}
+
+.splash-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+.splash-project-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
